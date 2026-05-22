@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import {
+    AppBar,
+    Toolbar,
     Box,
     Typography,
     Avatar,
@@ -8,10 +11,6 @@ import {
     MenuItem,
     IconButton,
     Divider,
-    AppBar,
-    Toolbar,
-    Chip,
-    Badge,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -20,130 +19,194 @@ import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import EmailIcon from "@mui/icons-material/Email";
 
-export default function Navbar({ user, setIsLoggedIn, onMenuClick }) {
+export default function Navbar({
+    user,
+    setIsLoggedIn,
+    onMenuClick
+}) {
 
-    const [anchorEl, setAnchorEl] = useState(null);
-    const navigate = useNavigate();
+    const [anchorEl, setAnchorEl] =
+        useState(null);
 
-    const openMenu = (e) => setAnchorEl(e.currentTarget);
-    const closeMenu = () => setAnchorEl(null);
+    const navigate =
+        useNavigate();
+
+    const openMenu = (e) => {
+
+        setAnchorEl(
+            e.currentTarget
+        );
+    };
+
+    const closeMenu = () => {
+
+        setAnchorEl(null);
+    };
 
     const logout = () => {
-        localStorage.removeItem("token");
+
+        localStorage.removeItem(
+            "token"
+        );
+
         setIsLoggedIn(false);
+
         closeMenu();
     };
 
     return (
-        <AppBar 
-            position="fixed" 
+
+        <AppBar
+            position="fixed"
             sx={{
                 background: "#faf8f5",
-                boxShadow: "0 2px 16px rgba(0, 0, 0, 0.08)",
-                backdropFilter: "blur(20px)",
-                borderBottom: "1px solid #e8e4df",
-                zIndex: 1300,
+                boxShadow:
+                    "0 2px 10px rgba(0,0,0,0.06)",
+                borderBottom:
+                    "1px solid #ece7e2",
             }}
         >
-            <Toolbar sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
-                {/* LEFT */}
-                <Box sx={{ display: "flex", alignItems: "center", gap: 2, flex: 1 }}>
+
+            <Toolbar
+                sx={{
+                    px: {
+                        xs: 2,
+                        sm: 3
+                    }
+                }}
+            >
+
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                        flex: 1
+                    }}
+                >
+
                     <IconButton
                         onClick={onMenuClick}
                         sx={{
                             color: "#2d2a26",
-                            backgroundColor: "rgba(193, 127, 89, 0.1)",
-                            borderRadius: 2,
+                            background:
+                                "rgba(193,127,89,0.08)",
+
                             "&:hover": {
-                                backgroundColor: "rgba(193, 127, 89, 0.2)",
-                                transform: "scale(1.05)",
-                            },
-                            transition: "all 0.3s ease",
+                                background:
+                                    "rgba(193,127,89,0.15)"
+                            }
                         }}
                     >
+
                         <MenuIcon />
+
                     </IconButton>
 
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                        <EmailIcon sx={{ fontSize: 28, color: "#c17f59" }} />
-                        <Typography 
-                            variant="h5" 
-                            fontWeight={600}
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1
+                        }}
+                    >
+
+                        <EmailIcon
                             sx={{
-                                color: "#2d2a26",
-                                letterSpacing: -0.5,
-                            }}
-                        >
-                            EMIPI
-                        </Typography>
-                        <Chip 
-                            label="PRO" 
-                            size="small" 
-                            sx={{
-                                backgroundColor: "#c17f59",
-                                color: "#fff",
-                                fontWeight: 600,
-                                fontSize: "0.65rem",
-                                height: 20,
+                                color: "#c17f59",
+                                fontSize: 28
                             }}
                         />
+
+                        <Typography
+                            variant="h5"
+                            sx={{
+                                fontWeight: 600,
+                                color: "#2d2a26"
+                            }}
+                        >
+
+                            EMIPI
+
+                        </Typography>
+
                     </Box>
+
                 </Box>
 
-                {/* RIGHT */}
                 {user && (
+
                     <>
+
                         <Box
                             onClick={openMenu}
                             sx={{
                                 display: "flex",
                                 alignItems: "center",
-                                gap: 2,
+                                gap: 1.5,
                                 cursor: "pointer",
-                                px: 2,
+                                px: 1.5,
                                 py: 1,
                                 borderRadius: 3,
-                                backgroundColor: "rgba(193, 127, 89, 0.08)",
+
                                 "&:hover": {
-                                    backgroundColor: "rgba(193, 127, 89, 0.15)",
-                                    transform: "translateY(-2px)",
-                                },
-                                transition: "all 0.3s ease",
+                                    background:
+                                        "rgba(193,127,89,0.08)"
+                                }
                             }}
                         >
-                            <Badge 
-                                overlap="circular" 
-                                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                                variant="dot"
+
+                            <Avatar
                                 sx={{
-                                    "& .MuiBadge-badge": {
-                                        backgroundColor: "#8b9a7d",
-                                        color: "#8b9a7d",
-                                    },
+                                    width: 36,
+                                    height: 36,
+                                    bgcolor: "#c17f59",
+                                    fontSize: "1rem",
+                                    fontWeight: 600
                                 }}
                             >
-                                <Avatar 
-                                    sx={{ 
-                                        bgcolor: "#c17f59",
-                                        color: "#fff",
-                                        width: 36,
-                                        height: 36,
+
+                                {
+                                    user.name[0]
+                                        .toUpperCase()
+                                }
+
+                            </Avatar>
+
+                            <Box
+                                sx={{
+                                    display: {
+                                        xs: "none",
+                                        sm: "block"
+                                    }
+                                }}
+                            >
+
+                                <Typography
+                                    variant="body2"
+                                    sx={{
                                         fontWeight: 600,
-                                        fontSize: "1rem",
-                                        border: "2px solid rgba(193, 127, 89, 0.3)",
+                                        color: "#2d2a26"
                                     }}
                                 >
-                                    {user.name[0].toUpperCase()}
-                                </Avatar>
-                            </Badge>
-                            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                                <Typography variant="body2" fontWeight={600} color="#2d2a26">
+
                                     {user.name}
+
                                 </Typography>
-                                <Typography variant="caption" color="#6b6560" fontSize="0.75rem">
+
+                                <Typography
+                                    variant="caption"
+                                    sx={{
+                                        color: "#777"
+                                    }}
+                                >
+
                                     {user.email}
+
                                 </Typography>
+
                             </Box>
+
                         </Box>
 
                         <Menu
@@ -152,73 +215,111 @@ export default function Navbar({ user, setIsLoggedIn, onMenuClick }) {
                             onClose={closeMenu}
                             PaperProps={{
                                 sx: {
-                                    mt: 2,
+                                    mt: 1.5,
                                     minWidth: 200,
                                     borderRadius: 3,
-                                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
-                                    backdropFilter: "blur(20px)",
-                                    border: "1px solid #e8e4df",
-                                    background: "#faf8f5",
-                                },
-                            }}
-                            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-                        >
-                            <MenuItem disabled sx={{ opacity: 0.7 }}>
-                                <Box>
-                                    <Typography variant="body2" fontWeight={600} color="#2d2a26">
-                                        {user.name}
-                                    </Typography>
-                                    <Typography variant="caption" color="#6b6560">
-                                        {user.email}
-                                    </Typography>
-                                </Box>
-                            </MenuItem>
-                            <Divider sx={{ my: 1, borderColor: "#e8e4df" }} />
+                                    border:
+                                        "1px solid #ece7e2",
 
-                            <MenuItem 
+                                    boxShadow:
+                                        "0 6px 24px rgba(0,0,0,0.08)"
+                                }
+                            }}
+                        >
+
+                            <MenuItem
+                                disabled
+                            >
+
+                                <Box>
+
+                                    <Typography
+                                        variant="body2"
+                                        sx={{
+                                            fontWeight: 600
+                                        }}
+                                    >
+
+                                        {user.name}
+
+                                    </Typography>
+
+                                    <Typography
+                                        variant="caption"
+                                        sx={{
+                                            color: "#777"
+                                        }}
+                                    >
+
+                                        {user.email}
+
+                                    </Typography>
+
+                                </Box>
+
+                            </MenuItem>
+
+                            <Divider />
+
+                            <MenuItem
                                 onClick={() => {
-                                    navigate("/profile");
+
+                                    navigate(
+                                        "/profile"
+                                    );
+
                                     closeMenu();
                                 }}
-                                sx={{
-                                    "&:hover": {
-                                        backgroundColor: "rgba(193, 127, 89, 0.08)",
-                                    },
-                                }}
                             >
-                                <PersonIcon sx={{ mr: 2, color: "#c17f59" }} /> 
-                                <Typography fontWeight={500} color="#2d2a26">Profile</Typography>
+
+                                <PersonIcon
+                                    sx={{
+                                        mr: 2,
+                                        color: "#c17f59"
+                                    }}
+                                />
+
+                                Profile
+
                             </MenuItem>
 
-                            <MenuItem 
-                                sx={{
-                                    "&:hover": {
-                                        backgroundColor: "rgba(139, 154, 125, 0.08)",
-                                    },
-                                }}
-                            >
-                                <SettingsIcon sx={{ mr: 2, color: "#8b9a7d" }} /> 
-                                <Typography fontWeight={500} color="#2d2a26">Settings</Typography>
+                            <MenuItem>
+
+                                <SettingsIcon
+                                    sx={{
+                                        mr: 2,
+                                        color: "#8b9a7d"
+                                    }}
+                                />
+
+                                Settings
+
                             </MenuItem>
 
-                            <Divider sx={{ my: 1, borderColor: "#e8e4df" }} />
+                            <Divider />
 
-                            <MenuItem 
+                            <MenuItem
                                 onClick={logout}
-                                sx={{
-                                    "&:hover": {
-                                        backgroundColor: "rgba(193, 127, 89, 0.08)",
-                                    },
-                                }}
                             >
-                                <LogoutIcon sx={{ mr: 2, color: "#c17f59" }} /> 
-                                <Typography fontWeight={500} color="#c17f59">Logout</Typography>
+
+                                <LogoutIcon
+                                    sx={{
+                                        mr: 2,
+                                        color: "#c17f59"
+                                    }}
+                                />
+
+                                Logout
+
                             </MenuItem>
+
                         </Menu>
+
                     </>
                 )}
+
             </Toolbar>
+
         </AppBar>
     );
 }
