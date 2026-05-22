@@ -4,32 +4,26 @@ import AuthModal from "./AuthModal";
 
 const features = [
     {
-        icon: "⚡",
         name: "Lightning Fast",
         desc: "Generate professional email replies in seconds.",
     },
     {
-        icon: "🎭",
         name: "Smart Tones",
         desc: "Choose from multiple reply tones for different situations.",
     },
     {
-        icon: "🧠",
         name: "AI Intelligence",
         desc: "Generate context-aware replies based on your emails.",
     },
     {
-        icon: "📋",
         name: "Smart Actions",
         desc: "Copy, save, and manage replies easily.",
     },
     {
-        icon: "📊",
         name: "Analytics",
         desc: "Track productivity and generated email activity.",
     },
     {
-        icon: "🚀",
         name: "Better Workflow",
         desc: "Improve email writing speed and efficiency.",
     },
@@ -133,12 +127,6 @@ function LandingPage({ onLogin }) {
 
                 <div className="lp-hero-content">
 
-                    <div className="lp-badge">
-
-                        Smart AI Email Assistant
-
-                    </div>
-
                     <h1 className="lp-title">
 
                         Write Better Emails
@@ -209,12 +197,6 @@ function LandingPage({ onLogin }) {
                             className="lp-feature-card"
                             key={f.name}
                         >
-
-                            <div className="lp-feature-icon">
-
-                                {f.icon}
-
-                            </div>
 
                             <div className="lp-feature-name">
 
