@@ -129,16 +129,24 @@ function LandingPage({ onLogin }) {
 
                     <h1 className="lp-title">
 
-                        Write Better Emails
+                        Generate Professional
                         <span className="title-gradient">
-                            {" "}Faster with AI
+                            {" "}Email Replies
                         </span>
+                        <br />
+
+                        Faster and Smarter
 
                     </h1>
 
                     <p className="lp-sub">
 
-                        Generate professional and context-aware email replies instantly using AI.
+                        EMIPI helps you generate clear, professional,
+                        and context-aware email replies instantly.
+                        Whether you're replying to clients,
+                        recruiters, colleagues, or support emails,
+                        the AI understands the conversation and
+                        creates natural replies in seconds.
 
                     </p>
 
@@ -151,7 +159,7 @@ function LandingPage({ onLogin }) {
                             }
                         >
 
-                            Start Free
+                            Get Started
 
                         </button>
 
@@ -165,6 +173,28 @@ function LandingPage({ onLogin }) {
                             Sign In
 
                         </button>
+
+                    </div>
+
+                    <div className="lp-trust-points">
+
+                        <div className="trust-point">
+
+                            Professional Replies
+
+                        </div>
+
+                        <div className="trust-point">
+
+                            Multiple Tone Options
+
+                        </div>
+
+                        <div className="trust-point">
+
+                            Fast AI Response
+
+                        </div>
 
                     </div>
 
@@ -185,7 +215,7 @@ function LandingPage({ onLogin }) {
 
                 <h2 className="lp-section-title">
 
-                    Everything You Need for Smart Email Replies
+                    Everything You Need for Smarter Email Communication
 
                 </h2>
 
@@ -229,7 +259,8 @@ function LandingPage({ onLogin }) {
 
                     <p className="lp-cta-sub">
 
-                        Generate smart replies instantly and save time every day.
+                        Generate smart replies instantly,
+                        save time, and handle emails more efficiently.
 
                     </p>
 
@@ -262,7 +293,9 @@ function LandingPage({ onLogin }) {
 
                         <p className="footer-desc">
 
-                            AI-powered email assistant for faster and smarter communication.
+                            Generate professional email replies quickly
+                            with AI-powered assistance built for
+                            modern communication.
 
                         </p>
 
