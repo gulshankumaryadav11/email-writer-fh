@@ -13,13 +13,10 @@ import {
     Divider,
 } from "@mui/material";
 
-import {
-    HiOutlineMenuAlt3,
-    HiOutlineLogout,
-    HiOutlineUser,
-    HiOutlineCog,
-    HiOutlineMail,
-} from "react-icons/hi";
+import MenuIcon from "@mui/icons-material/Menu";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PersonIcon from "@mui/icons-material/Person";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 export default function Navbar({
     user,
@@ -101,38 +98,22 @@ export default function Navbar({
                         }}
                     >
 
-                        <HiOutlineMenuAlt3
-                            size={22}
-                        />
+                        <MenuIcon />
 
                     </IconButton>
 
-                    <Box
+                    <Typography
+                        variant="h5"
                         sx={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 1
+                            fontWeight: 600,
+                            color: "#2d2a26",
+                            letterSpacing: "0.5px"
                         }}
                     >
 
-                        <HiOutlineMail
-                            size={28}
-                            color="#c17f59"
-                        />
+                        EMIPI
 
-                        <Typography
-                            variant="h5"
-                            sx={{
-                                fontWeight: 600,
-                                color: "#2d2a26"
-                            }}
-                        >
-
-                            EMIPI
-
-                        </Typography>
-
-                    </Box>
+                    </Typography>
 
                 </Box>
 
@@ -274,10 +255,9 @@ export default function Navbar({
                                 }}
                             >
 
-                                <HiOutlineUser
-                                    size={18}
-                                    style={{
-                                        marginRight: 14,
+                                <PersonIcon
+                                    sx={{
+                                        mr: 2,
                                         color: "#c17f59"
                                     }}
                                 />
@@ -288,10 +268,9 @@ export default function Navbar({
 
                             <MenuItem>
 
-                                <HiOutlineCog
-                                    size={18}
-                                    style={{
-                                        marginRight: 14,
+                                <SettingsIcon
+                                    sx={{
+                                        mr: 2,
                                         color: "#8b9a7d"
                                     }}
                                 />
@@ -306,10 +285,9 @@ export default function Navbar({
                                 onClick={logout}
                             >
 
-                                <HiOutlineLogout
-                                    size={18}
-                                    style={{
-                                        marginRight: 14,
+                                <LogoutIcon
+                                    sx={{
+                                        mr: 2,
                                         color: "#c17f59"
                                     }}
                                 />
