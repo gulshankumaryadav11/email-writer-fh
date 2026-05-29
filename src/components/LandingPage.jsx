@@ -11,9 +11,7 @@ import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import HubRoundedIcon from "@mui/icons-material/HubRounded";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
-import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
-import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-import SendRoundedIcon from "@mui/icons-material/SendRounded";
+
 
 import ExtensionIcon from "@mui/icons-material/Extension";
 
@@ -347,19 +345,15 @@ function LandingPage({ onLogin }) {
                             className="lp-feature-card"
                             key={f.name}
                         >
-
+                            <div className="feature-icon">
+                                {f.icon}
+                            </div>
                             <div className="lp-feature-name">
-
                                 {f.name}
-
                             </div>
-
                             <div className="lp-feature-desc">
-
                                 {f.desc}
-
                             </div>
-
                         </div>
                     ))}
 
