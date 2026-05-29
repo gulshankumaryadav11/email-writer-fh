@@ -359,7 +359,72 @@ function LandingPage({ onLogin }) {
 
                 </div>
 
-            </section>
+            </section><section
+    className="how-section"
+    id="how"
+>
+
+    <div className="lp-section-label">
+        How It Works
+    </div>
+
+    <h2 className="lp-section-title">
+        Generate Replies in 3 Simple Steps
+    </h2>
+
+    <div className="steps-grid">
+
+        <div className="step-card">
+
+            <EmailRoundedIcon />
+
+            <h3>
+                Open Email
+            </h3>
+
+            <p>
+                Select any email conversation
+                you want to reply to.
+            </p>
+
+        </div>
+
+        <div className="step-card">
+
+            <HubRoundedIcon />
+
+            <h3>
+                AI Understands Context
+            </h3>
+
+            <p>
+                EMIPI analyzes the email
+                thread and understands
+                the conversation.
+            </p>
+
+        </div>
+
+        <div className="step-card">
+
+            <SendRoundedIcon />
+
+            <h3>
+                Generate Reply
+            </h3>
+
+            <p>
+                Get professional replies
+                instantly and insert them
+                into your email.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+            
 
             <section className="lp-cta">
 
