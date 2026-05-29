@@ -164,30 +164,21 @@ function LandingPage({ onLogin }) {
             </nav>
 
             <section className="lp-hero">
-
-    <div className="lp-hero-left">
-
-        <div className="hero-badge">
-
-            <AutoAwesomeRoundedIcon
-                sx={{
-                    fontSize: 18
-                }}
-            />
-
-            AI Powered Email Assistant
-
-        </div>
-
-        <h1 className="lp-title">
-
-            Write Better
-
-            <span className="title-gradient">
-                {" "}Email Replies
-            </span>
-
-            <br />
+                <div className="lp-hero-left">
+                    <div className="hero-badge">
+                        <AutoAwesomeRoundedIcon
+                            sx={{
+                                fontSize: 18
+                            }}
+                        />
+                        AI Powered Email Assistant
+                    </div>
+                    <h1 className="lp-title">
+                        Write Better
+                        <span className="title-gradient">
+                            {" "}Email Replies
+                        </span>
+                        <br />
 
             in Seconds.
 
