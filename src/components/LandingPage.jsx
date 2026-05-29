@@ -1,29 +1,45 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AuthModal from "./AuthModal";
+import BoltRoundedIcon from "@mui/icons-material/BoltRounded";
+import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
+import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded";
+import ContentCopyRoundedIcon from "@mui/icons-material/ContentCopyRounded";
+import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
+import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
+import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
+import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
+import HubRoundedIcon from "@mui/icons-material/HubRounded";
+import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
 const features = [
     {
+        icon: <BoltRoundedIcon />,
         name: "Lightning Fast",
         desc: "Generate professional email replies in seconds.",
     },
     {
+        icon: <AutoAwesomeRoundedIcon />,
         name: "Smart Tones",
         desc: "Choose from multiple reply tones for different situations.",
     },
     {
+        icon: <PsychologyRoundedIcon />,
         name: "AI Intelligence",
         desc: "Generate context-aware replies based on your emails.",
     },
     {
+        icon: <ContentCopyRoundedIcon />,
         name: "Smart Actions",
         desc: "Copy, save, and manage replies easily.",
     },
     {
+        icon: <AnalyticsRoundedIcon />,
         name: "Analytics",
         desc: "Track productivity and generated email activity.",
     },
     {
+        icon: <TrendingUpRoundedIcon />,
         name: "Better Workflow",
         desc: "Improve email writing speed and efficiency.",
     },
@@ -40,7 +56,6 @@ function LandingPage({ onLogin }) {
     const openModal = (tab) => {
 
         setAuthTab(tab);
-
         setShowModal(true);
     };
 
@@ -51,6 +66,10 @@ function LandingPage({ onLogin }) {
             <nav className="lp-nav">
 
                 <div className="lp-nav-logo">
+
+                    <div className="brand-icon">
+                        <AutoAwesomeRoundedIcon />
+                    </div>
 
                     <span>
                         EMIPI
@@ -65,6 +84,13 @@ function LandingPage({ onLogin }) {
                         href="#features"
                     >
                         Features
+                    </a>
+
+                    <a
+                        className="lp-nav-link"
+                        href="#how"
+                    >
+                        How It Works
                     </a>
 
                     <Link
@@ -93,9 +119,22 @@ function LandingPage({ onLogin }) {
                 <div
                     style={{
                         display: "flex",
-                        gap: 12
+                        alignItems: "center",
+                        gap: 16
                     }}
                 >
+
+                    <div className="chrome-badge">
+
+                        <ExtensionRoundedIcon
+                            sx={{
+                                fontSize: 18
+                            }}
+                        />
+
+                        Chrome Extension
+
+                    </div>
 
                     <button
                         className="lp-btn-ghost"
@@ -103,9 +142,7 @@ function LandingPage({ onLogin }) {
                             openModal("login")
                         }
                     >
-
                         Sign In
-
                     </button>
 
                     <button
@@ -114,9 +151,7 @@ function LandingPage({ onLogin }) {
                             openModal("signup")
                         }
                     >
-
                         Get Started
-
                     </button>
 
                 </div>
