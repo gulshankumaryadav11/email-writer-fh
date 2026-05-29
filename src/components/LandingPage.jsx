@@ -11,6 +11,8 @@ import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import HubRoundedIcon from "@mui/icons-material/HubRounded";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
+import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
+import ExtensionIcon from "@mui/icons-material/Extension";
 
 const features = [
     {
