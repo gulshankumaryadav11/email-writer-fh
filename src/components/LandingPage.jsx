@@ -11,6 +11,9 @@ import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import HubRoundedIcon from "@mui/icons-material/HubRounded";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
+import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
+import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
+import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
 import ExtensionIcon from "@mui/icons-material/Extension";
 
@@ -162,82 +165,171 @@ function LandingPage({ onLogin }) {
 
             <section className="lp-hero">
 
-                <div className="lp-hero-content">
+    <div className="lp-hero-left">
 
-                    <h1 className="lp-title">
+        <div className="hero-badge">
 
-                        Generate Professional
-                        <span className="title-gradient">
-                            {" "}Email Replies
-                        </span>
-                        <br />
+            <AutoAwesomeRoundedIcon
+                sx={{
+                    fontSize: 18
+                }}
+            />
 
-                        Faster and Smarter
+            AI Powered Email Assistant
 
-                    </h1>
+        </div>
 
-                    <p className="lp-sub">
+        <h1 className="lp-title">
 
-                        EMIPI helps you generate clear, professional,
-                        and context-aware email replies instantly.
-                        Whether you're replying to clients,
-                        recruiters, colleagues, or support emails,
-                        the AI understands the conversation and
-                        creates natural replies in seconds.
+            Write Better
 
-                    </p>
+            <span className="title-gradient">
+                {" "}Email Replies
+            </span>
 
-                    <div className="lp-actions">
+            <br />
 
-                        <button
-                            className="lp-btn-hero"
-                            onClick={() =>
-                                openModal("signup")
-                            }
-                        >
+            in Seconds.
 
-                            Get Started
+        </h1>
 
-                        </button>
+        <p className="lp-sub">
 
-                        <button
-                            className="lp-btn-hero-ghost"
-                            onClick={() =>
-                                openModal("login")
-                            }
-                        >
+            EMIPI understands your conversations
+            and generates professional replies
+            instantly. Save time, improve communication,
+            and reply faster with AI assistance.
 
-                            Sign In
+        </p>
 
-                        </button>
+        <div className="lp-actions">
 
-                    </div>
+            <button
+                className="lp-btn-hero"
+                onClick={() =>
+                    openModal("signup")
+                }
+            >
 
-                    <div className="lp-trust-points">
+                Get Started Free
 
-                        <div className="trust-point">
+            </button>
 
-                            Professional Replies
+            <button
+                className="lp-btn-hero-ghost"
+                onClick={() =>
+                    openModal("login")
+                }
+            >
 
-                        </div>
+                Sign In
 
-                        <div className="trust-point">
+            </button>
 
-                            Multiple Tone Options
+        </div>
 
-                        </div>
+        <div className="lp-trust-points">
 
-                        <div className="trust-point">
+            <div className="trust-point">
 
-                            Fast AI Response
+                <CheckCircleRoundedIcon
+                    sx={{
+                        fontSize: 18
+                    }}
+                />
 
-                        </div>
+                Gmail Compatible
 
-                    </div>
+            </div>
 
-                </div>
+            <div className="trust-point">
 
-            </section>
+                <CheckCircleRoundedIcon
+                    sx={{
+                        fontSize: 18
+                    }}
+                />
+
+                Human-like Replies
+
+            </div>
+
+            <div className="trust-point">
+
+                <CheckCircleRoundedIcon
+                    sx={{
+                        fontSize: 18
+                    }}
+                />
+
+                Faster Workflow
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div className="lp-hero-right">
+
+        <div className="email-preview">
+
+            <div className="email-preview-header">
+
+                <EmailRoundedIcon />
+
+                Incoming Email
+
+            </div>
+
+            <div className="email-message">
+
+                Hi Gulshan,
+                <br />
+                Can you please share the project
+                update by tomorrow morning?
+
+            </div>
+
+            <div className="generated-label">
+
+                <AutoAwesomeRoundedIcon
+                    sx={{
+                        fontSize: 16
+                    }}
+                />
+
+                AI Generated Reply
+
+            </div>
+
+            <div className="reply-box">
+
+                Sure! I'll prepare the complete
+                update and send it by tomorrow
+                morning. Let me know if there
+                is anything specific you'd like
+                included.
+
+            </div>
+
+            <button className="insert-btn">
+
+                <SendRoundedIcon
+                    sx={{
+                        fontSize: 18
+                    }}
+                />
+
+                Insert Reply
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
             <section
                 className="lp-features"
