@@ -823,6 +823,154 @@ body {
   font-weight: 500;
 }
 
+/* NEW LANDING PAGE STYLES START */
+
+.brand-icon{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  background:var(--terracotta);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.chrome-badge{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:#fff4ed;
+  border:1px solid #f1d8ca;
+  color:var(--terracotta);
+  font-weight:600;
+}
+
+.lp-hero-left{
+  flex:1;
+  max-width:620px;
+}
+
+.lp-hero-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:#fff4ed;
+  border:1px solid #f1d8ca;
+  color:var(--terracotta);
+  font-weight:600;
+  margin-bottom:24px;
+}
+
+.lp-trust-points{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.trust-point{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.email-preview{
+  width:100%;
+  max-width:520px;
+  background:#fff;
+  padding:24px;
+  border-radius:28px;
+  box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+.email-preview-header{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.email-message{
+  background:#f8f8f8;
+  padding:16px;
+  border-radius:14px;
+  margin-bottom:16px;
+}
+
+.generated-label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--terracotta);
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.reply-box{
+  background:#fff4ed;
+  border:1px solid #f0d8c7;
+  padding:16px;
+  border-radius:14px;
+  margin-bottom:18px;
+}
+
+.insert-btn{
+  width:100%;
+  height:48px;
+  border:none;
+  border-radius:12px;
+  background:var(--terracotta);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.feature-icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:var(--terracotta);
+  margin-bottom:16px;
+}
+
+.how-section{
+  padding:100px 24px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.steps-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:40px;
+}
+
+.step-card{
+  background:#fff;
+  border-radius:24px;
+  padding:28px;
+  text-align:center;
+  border:1px solid var(--light-gray);
+}
+
+/* NEW LANDING PAGE STYLES END */
+
+/* RESPONSIVE */
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .lp-nav {
